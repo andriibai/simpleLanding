@@ -1,0 +1,4 @@
+http://seroed.intfom.com/programirovanie/yii2/item/252-nastrojka-podklyucheniya-i-rabota-s-github#gkPageTop
+
+--update $FileName$:$FileParentDir$/css/$FileNameWithoutExtension$.css
+$FileParentDir$/css/$FileNameWithoutExtension$.css
