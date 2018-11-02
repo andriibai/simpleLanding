@@ -1,0 +1,45 @@
+@mixin respond-to($media) {
+  @if $media == grid-tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $media == grid-small-desktop {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $media == grid-large-desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 320px){
+
+}
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 992px){
+
+}
+@media only screen and (max-width: 1200px){
+
+}
+
+
+.wrapper-grid {
+  @include respond-to(grid-tablet) {
+    width: 750px;
+  }
+  @include respond-to(grid-small-desktop) {
+    width: 970px;
+  }
+  @include respond-to(grid-large-desktop) {
+    width: 1170px;
+  }
+}
+
