@@ -41,3 +41,44 @@ $(document).ready(function() {
         $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
     });
 });
+/*----------------------------------------------*/
+
+/*--------------SLIDER FOR REASONS---------------*/
+$(document).ready(function () {
+
+    $('.tab-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        speed: 1,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: true,
+                    speed: 300,
+                }
+            }
+        ]
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 6,
+        asNavFor: '.tab-slider',
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+
+
+});
+/*-----------------------------------------------*/
