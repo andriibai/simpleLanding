@@ -1,5 +1,7 @@
 /*------------SELECT--------------------*/
 $(document).ready(function() {
+
+
     $(".custom-select").each(function () {
         var classes = $(this).attr("class"),
             id = $(this).attr("id"),
@@ -40,16 +42,24 @@ $(document).ready(function() {
         $(this).parents(".custom-select").removeClass("opened");
         $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
     });
+
 });
 /*----------------------------------------------*/
 
 /*--------------SLIDER FOR REASONS---------------*/
-$(document).ready(function () {
+$(document).ready(function() {
+
+    $('.tab-slider').on('init', function() {
+        $('.tab-slider').css({
+            visibility: 'visible'
+        });
+    });
 
     $('.tab-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-nav',
+        lazyLoad: 'ondemand',
         speed: 1,
         arrows: false,
         responsive: [
@@ -62,6 +72,8 @@ $(document).ready(function () {
             }
         ]
     });
+
+
     $('.slider-nav').slick({
         slidesToShow: 6,
         asNavFor: '.tab-slider',
@@ -79,6 +91,61 @@ $(document).ready(function () {
     });
 
 
+    $('.experts-slider').on('init', function() {
+        $('.experts-slider').css({
+            visibility: 'visible'
+        });
+    });
+
+    $('.experts-slider').slick({
+        dots:false,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    $('.reviews-slider').slick({
+        dots:true,
+        prevArrow: $('.prev2'),
+        nextArrow: $('.next2'),
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000
+    });
+
 
 });
+
 /*-----------------------------------------------*/
