@@ -102,10 +102,11 @@ $(document).ready(function() {
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
         infinite: true,
+        cssEase: 'linear',
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         responsive: [
             {
@@ -133,15 +134,50 @@ $(document).ready(function() {
     });
 
 
+    $('.reviews-slider').on('init', function() {
+        $('.reviews-slider').css({
+            visibility: 'visible'
+        });
+    });
     $('.reviews-slider').slick({
         dots:true,
+        centerMode:true,
         prevArrow: $('.prev2'),
         nextArrow: $('.next2'),
         infinite: true,
+        cssEase: 'linear',
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
+        autoplaySpeed: 3000
+    });
+
+
+    if ($(window).width() < 767) {
+        $('.lastorder-content').addClass('lastorder-slider-mob');
+    }
+    else{
+        $('.lastorder-content').removeClass('lastorder-slider-mob');
+    }
+    $('.lastorder-slider-mob').on('init', function() {
+        $('.lastorder-slider-mob').css({
+            visibility: 'visible'
+        });
+    });
+    $('.lastorder-slider-mob').slick({
+        dots:true,
+        prevArrow: null,
+        nextArrow: null,
+        //centerMode:true,
+        //variableWidth: true,
+        adaptiveHeight: true,
+        infinite: true,
+        cssEase: 'linear',
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
         autoplaySpeed: 3000
     });
 
@@ -149,3 +185,23 @@ $(document).ready(function() {
 });
 
 /*-----------------------------------------------*/
+/*------------ACORDEON FAQ----------------*/
+$(document).ready(function() {
+    var contents = $('.answer');
+    var titles = $('.question');
+    titles.on('click', function () {
+        var title = $(this);
+        contents.filter(':visible').slideUp(function () {
+            $(this).prev('.question').removeClass('is-opened');
+        });
+
+        var content = title.next('.answer');
+
+        if (!content.is(':visible')) {
+            content.slideDown(function () {
+                title.addClass('is-opened')
+            });
+        }
+    });
+});
+/*----------------------------------*/
