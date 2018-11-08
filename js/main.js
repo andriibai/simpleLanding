@@ -1,7 +1,5 @@
 /*------------SELECT--------------------*/
 $(document).ready(function() {
-
-
     $(".custom-select").each(function () {
         var classes = $(this).attr("class"),
             id = $(this).attr("id"),
@@ -117,7 +115,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 992,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
@@ -150,11 +148,34 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
-        autoplaySpeed: 3000
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
 
-    if ($(window).width() < 767) {
+    if ($(window).width() < 992) {
         $('.lastorder-content').addClass('lastorder-slider-mob');
     }
     else{

@@ -125,8 +125,9 @@ body{
   background: $color-orange;
   transition: .5s;
   &:hover{
-    color: $color-black;
+    color: $color-orange;
     background-color: $color-white;
+
   }
 }
 .section-title{
@@ -318,6 +319,7 @@ body{
 }
 /*--------------------------*/
 .section-profess{
+  padding: 78px 0 55px 0;
   .button{
     width: 203px;
     height: 51px;
@@ -330,6 +332,7 @@ body{
   flex-wrap: nowrap;
   div{
     align-items: center;
+    margin: 14px 0;
   }
   img{
     height: 60px;
@@ -341,6 +344,7 @@ body{
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+    padding: 0 5px;
   }
 }
 
@@ -349,12 +353,17 @@ body{
   background: linear-gradient(-45deg, #e9eaec 25%, #f8f8f8 0, #f8f8f8 50%, #e9eaec 0, #e9eaec 75%, #f8f8f8 0);
   background-size: 6px 6px;
 }
+
+.section-benefits{
+  padding: 64px 0;
+}
 .section-benefits-content{
   justify-content: space-around;
   div{
     width: 190px;
     justify-content: flex-start;
     align-items: center;
+    margin: 14px 0;
   }
   img{
     height: 60px;
@@ -621,7 +630,6 @@ body{
 
 .banner-white{
   background-color: $color-white;
-  margin-top: 68px;
 }
 .banner-white-content{
   justify-content: space-around;
@@ -645,6 +653,7 @@ body{
 .section-offer{
   background-image: url('../img/writingoffer-bg.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-offer-content{
@@ -671,8 +680,13 @@ body{
     height: 381px;
     background: $color-turquoise;
     padding: 40px 60px;
+    .custom-select-trigger{
+      padding: 16px 35px 16px 45px;
 
+    }
     .button{
+      font-size: 20px;
+      font-weight: 900;
       width: 172px;
       height: 42px;
       margin: 0 auto;
@@ -681,13 +695,24 @@ body{
 }
 
 .content-select{
-  .form-group-select{
     .custom-select-trigger{
       font-size: 18px;
       font-weight: 900;
       color: #303030;
       z-index: 1;
+      padding: 16px 35px 16px 45px;
     }
+}
+.custom-select{
+  .custom-select-trigger{
+    transition: all 0.4s ease-in-out;
+  }
+}
+.custom-select.opened{
+  .custom-select-trigger{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -873,8 +898,9 @@ body{
         content: "";
         display:inline-flex;
         position: relative;
-        width: 15px;
-        height: 15px;
+        bottom: 3px;
+        width: 14px;
+        height: 14px;
         margin-right: 25px;
         margin-left: 0;
         margin-top: 0;
@@ -883,7 +909,14 @@ body{
         cursor: pointer;
         -webkit-transform: rotateZ(135deg);
         transform: rotateZ(135deg);
-
+        transition: all 0.4s ease-in-out;
+        }
+      }
+    .question.is-opened{
+      &:before{
+        -webkit-transform: rotateZ(225deg);
+        transform: rotateZ(225deg);
+        transition: all 0.4s ease-in-out;
       }
     }
     .answer{
@@ -922,9 +955,13 @@ body{
   background-repeat: no-repeat;
   .services-content{
     width: 82%;
+    height: 525px;
+    position: relative;
+    z-index: 10;
     margin: 0 auto;
     padding: 50px 100px;
     background: $color-turquoise;
+
     ul{
       justify-content: flex-start;
       li{
@@ -977,6 +1014,40 @@ body{
   .contact{
     /*justify-content: flex-start;*/
     width: 70%;
+  }
+  .footer-link{
+    flex-wrap: wrap;
+    align-items: center;
+    height: 94px;
+    li{
+      a{
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 900;
+        transition: .5s;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .footer-info{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    ol{
+      padding-left: 38px;
+      li{
+        list-style-type: decimal;
+      }
+    }
+  }
+  .footer-copyright{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 35px 0 14px 0;
   }
 }
 
