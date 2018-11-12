@@ -121,7 +121,7 @@ body{
 .button{
   border-radius: 24px;
   border: 1px solid $color-orange;
-  color: #ffff;
+  color: #fff;
   background: $color-orange;
   transition: .5s;
   &:hover{
@@ -377,23 +377,26 @@ body{
   margin: 0 17px 5px 0;
 }
 #scroll-style::-webkit-scrollbar{
+
+  -webkit-appearance: none;
   width: 5px;
   opacity: 0.2;
   border-radius: 2.5px;
   background-color: #eaeaea;
 }
-#scroll-style::-webkit-scrollbar-thumb
-{
+
+#scroll-style::-webkit-scrollbar-thumb {
   opacity: 0.2;
   border-radius: 2.5px;
   background-color: #2d2926;
-
 }
+
 .custom-select.opened .custom-options {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
   transform: translateY(0);
+
 }
 .option-hover:before {
   background: #f9f9f9;
@@ -990,7 +993,7 @@ body{
     background-size: 6px 6px;
     font-size: 18px;
     font-weight: 900;
-    padding: 30px 32px;
+    padding: 30px 31px;
     margin-bottom: 20px;
 
   }
