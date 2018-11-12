@@ -14,6 +14,7 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/scrollspy.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -22,6 +23,14 @@
 <header class="header">
     <div class="wrapper-grid">
         <div class="block-h block-center header-content">
+            <div id="nav-icon-mob">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
             <div class="block-h block-center phone"><img src="img/phone.svg" alt="">123128147839</div>
             <div class="block-h block-center email"><img src="img/email.svg" alt="">df23423@gmail.com</div>
@@ -34,13 +43,13 @@
     <div class="wrapper-grid">
         <nav id="navbar" class="navbar main-menu">
             <ul id="top-menu" class="block-h block-center">
-                <li><a href="#">Writing Services</a></li>
-                <li><a href="#">Guarantees</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Experts</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Resource</a></li>
-                <li><a href="#">For writers</a></li>
+                <li><a href="#profess">Writing Services</a></li>
+                <li><a href="#benefits">Guarantees</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#experts">Experts</a></li>
+                <li><a href="#reviews">About us</a></li>
+                <li><a href="#howorder">Resource</a></li>
+                <li><a href="#services">For writers</a></li>
             </ul>
         </nav>
         <div class="section-header-content">
@@ -137,6 +146,7 @@
                                 <div class="slide-img">
                                     <img src="img/reasons-img01.png" alt="">
                                 </div>
+                                <span class="title">No plagiarism</span>
                                 <div class="slide-desc">
                                     We will check your assignment for plagiarism and will get rid of it for you
                                 </div>
@@ -147,6 +157,7 @@
                                 <div class="slide-img">
                                     <img src="img/reasons-img01.png" alt="">
                                 </div>
+                                <span class="title">One-on-one communication</span>
                                 <div class="slide-desc">
                                     Chat with your editor any time of the day (or night!).
                                 </div>
@@ -157,6 +168,7 @@
                                 <div class="slide-img">
                                     <img src="img/reasons-img01.png" alt="">
                                 </div>
+                                <span class="title">Free of mistakes</span>
                                 <div class="slide-desc">
                                     Your assignment will be proofread and cleared of any possible mistakes.
                                 </div>
@@ -167,6 +179,7 @@
                                 <div class="slide-img">
                                     <img src="img/reasons-img01.png" alt="">
                                 </div>
+                                <span class="title">24/7 Support</span>
                                 <div class="slide-desc">
                                     Chat with our Support Team 24/7 to resolve any issue any time
                                 </div>
@@ -177,6 +190,7 @@
                                 <div class="slide-img">
                                     <img src="img/reasons-img01.png" alt="">
                                 </div>
+                                <span class="title">In time for the deadline</span>
                                 <div class="slide-desc">
                                     Our editors will never miss your deadline.
                                 </div>
@@ -185,7 +199,10 @@
                     </div>
                 </div>
             </div>
-
+        <ul class="slider-arrow block-h">
+            <li class="prev0"></li>
+            <li class="next0"></li>
+        </ul>
     </div>
     <div class="banner-blue">
         <div class="wrapper-grid">
@@ -251,7 +268,7 @@
                    </select>
                 </div>
                 <div class="form-group-select">
-                   <select name="sources" class="custom-select"  data-placeholder="Essay (Any Type)">
+                   <select name="sources" class="custom-select"  data-placeholder="Subject">
                        <option value="13">Research paper</option>
                        <option value="1">Essay (Any Type)</option>
                        <option value="2">Admission Essay</option>
@@ -264,7 +281,7 @@
                    </select>
                 </div>
                 <div class="form-group-select">
-                   <select name="sources" class="custom-select"  data-placeholder="Essay (Any Type)">
+                   <select name="sources" class="custom-select"  data-placeholder="Deadline">
                        <option value="13">Research paper</option>
                        <option value="1">Essay (Any Type)</option>
                        <option value="2">Admission Essay</option>
@@ -305,7 +322,7 @@
                 </select>
             </div>
             <div class="form-group-select">
-                <select name="sources" class="custom-select"  data-placeholder="Essay (Any Type)">
+                <select name="sources" class="custom-select"  data-placeholder="Subject">
                     <option value="13">Research paper</option>
                     <option value="1">Essay (Any Type)</option>
                     <option value="2">Admission Essay</option>
@@ -453,8 +470,8 @@
             </div>
         </div>
         <ul class="slider-arrow block-h">
-            <li class="prev"></li>
-            <li class="next"></li>
+            <li class="prev1"></li>
+            <li class="next1"></li>
         </ul>
 
     </div>
@@ -510,11 +527,11 @@
                     </span>
                 </div>
                 <div class="date">24.11.2018</div>
-                <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                <div class="reviews"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
             </div>
             <div class="block-v slide">
                 <div class="block-h block-center block-info">
-                    <span class="name">Tom Isaak</span>
+                    <span class="name">Tom Isaak2</span>
                     <span class="stars">
                         <i class="fa fa-star check"></i>
                         <i class="fa fa-star check"></i>
@@ -524,11 +541,11 @@
                     </span>
                 </div>
                 <div class="date">24.11.2018</div>
-                <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                <div class="reviews"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
             </div>
             <div class="block-v slide">
                 <div class="block-h block-center block-info">
-                    <span class="name">Tom Isaak</span>
+                    <span class="name">Tom Isaak3</span>
                     <span class="stars">
                         <i class="fa fa-star check"></i>
                         <i class="fa fa-star check"></i>
@@ -538,7 +555,7 @@
                     </span>
                 </div>
                 <div class="date">24.11.2018</div>
-                <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                <div class="reviews"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
             </div>
         </div>
         <ul class="slider-arrow block-h">

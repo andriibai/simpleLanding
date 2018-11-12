@@ -22,6 +22,10 @@
 }
 
 @media only screen and (max-width: 640px){
+  .section-header{
+    height: 420px!important;
+  }
+
   .section-howorder{
     background-size: cover;
   }
@@ -30,10 +34,30 @@
     align-items: center;
   }
   .slider-arrow{
-    display: none;
+    /*display: none;*/
   }
   .reviews-slider .slide{
 
+  }
+  .section-reviews .slider-arrow{
+    display: none;
+  }
+  .reviews-slider .slide{
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+  .reviews-slider .name{
+    font-size: 20px!important;
+  }
+  .reviews-slider .date{
+    font-size: 16px!important;
+  }
+  .reviews-slider .stars .fa-star{
+    font-size: 18px!important;
+  }
+
+  .section-faq .faq-content{
+    width: 100%;
   }
   .faq-container{
     flex-direction: column;
@@ -41,23 +65,132 @@
   .chat{
     margin-top: 20px;
     width: 100%!important;
+    .button{
+      width: 152px;
+      height: 38px;
+      font-size: 18px;
+    }
+  }
+
+  .banner-blue-content{
+    text-align: center;
+    height: 254px!important;
+    flex-direction: column;
+    font-size: 20px!important;
+    justify-content: space-evenly;
+  }
+  .banner-blue-content span{
+    font-size: 24px!important;
+  }
+  .banner-blue-content .button{
+    width: 206px!important;
+    height: 51px!important;
+    font-size: 18px!important;
+  }
+
+  .banner-white-content{
+    text-align: center;
+    height: 254px!important;
+    flex-direction: column;
+    font-size: 20px!important;
+    justify-content: space-evenly;
+  }
+  .banner-white-content span{
+    font-size: 24px!important;
+  }
+  .banner-white-content .button{
+    width: 206px!important;
+    height: 51px!important;
+    font-size: 18px!important;
+  }
+
+  .footer .footer-row .payment{
+    width: 34px;
+    margin-left: 5px;
+  }
+  .footer .footer-link{
+    height: auto;
   }
 }
 
 
 @media only screen and (max-width: 767px){
+  .header .header-content {
+    height: 68px!important;
+    justify-content: flex-start;
+  }
+  .header .header-content .logo img{
+    height: 34px!important;
+  }
   .header .header-content .phone, .header .header-content .email, .header .header-content .account{
     display: none;
   }
+  .fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+  }
   .main-menu{
     display: none;
+  }
+  #nav-icon-mob{
+    display: block;
+    margin-right: 27px;
+  }
+  .main-menu.active{
+    display: block;
+    clear: both;
+    width: 50%;
+    height: 100%;
+    width: 100%!important;
+    position: fixed;
+    float: none;
+    top: 51px;
+    left: 0;
+    padding: 15px 20px;
+    z-index: 50;
+    background-color: #f7f7f7;
+    ul{
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      li{
+        padding: 0;
+        a{
+          display: flex;
+          font-size: 20px;
+          margin: 14px 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .section-header-content .block-select{
+    height: 146px!important;
+    flex-direction: column;
+    width: 100%!important;
+  }
+  .custom-select-trigger{
+    width: 261px!important;
+    font-size: 18px!important;
+    padding: 13px 40px 13px 52px!important;
+  }
+  .custom-select-trigger:after{
+    right: 30px!important;
+  }
+  .section-header-content .block-select .button {
+    width: 261px!important;
+    height: 50px!important;
+    font-size: 18px!important;
   }
 
   .section-header-content{
     width: 100%!important;
     h1{
-      margin-top: 55px!important;
+      margin-top: 12px!important;
       text-align: center;
+      font-size: 24px!important;
     }
     .description{
       text-align: center;
@@ -81,24 +214,45 @@
     font-size: 20px!important;
   }
 
-
-  .banner-blue-content{
+  .section-reasons .slider-nav{
+    display: none;
+  }
+  .section-reasons .slide .title{
+    display: block;
+  }
+  .section-reasons .tab-slider{
+    width: 100%!important;
+  }
+  .section-reasons .slide{
+    background: none;
+  }
+  .section-reasons .slide .slide-img{
+    width: 100%;
+  }
+  .section-reasons .slide img{
+    margin: 0 auto;
+    width: 212px;
+  }
+  .section-reasons .slide .slide-desc{
+    width: 100%;
     text-align: center;
-    height: 254px!important;
-    flex-direction: column;
-    font-size: 20px!important;
-    justify-content: space-evenly;
-  }
-  .banner-blue-content span{
-    font-size: 24px!important;
-  }
-  .banner-blue-content .button{
-    width: 206px!important;
-    height: 51px!important;
     font-size: 18px!important;
-
+    padding: 20px 16px 5px 16px !important;
+  }
+  .section-reasons .slider-arrow{
+      display: flex;
+      bottom: 277px;
+    .prev0{
+      right: 0;
+    }
+    .next0{
+      left: 0;
+    }
   }
 
+  .banner-blue{
+    margin-top: 0!important;
+  }
 
   .section-benefits-content img{
     height: 60px!important;
@@ -372,7 +526,7 @@
       bottom: 213px;
     }
   }
-  .prev, .prev2, .next, .next2{
+  .prev1, .prev2, .next1, .next2{
     width: 20px;
     height: 20px;
   }
@@ -403,6 +557,7 @@
       margin-bottom: 20px;
     }
   }
+
 
   .reviews-slider{
     .name {
@@ -515,10 +670,10 @@
   .section-experts .content-select{
     width: 83%;
   }
-  .prev, .prev2{
+  .prev1, .prev2{
     right: 10px;
   }
-  .next, .next2{
+  .next1, .next2{
     left: 10px;
   }
   .section-howorder .block-info{
